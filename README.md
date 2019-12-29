@@ -2,8 +2,8 @@
 <br/>
 <br/>
 ![Platform: Windows](https://img.shields.io/badge/platform-windows-brightgreen.svg)
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/paulem/resxul?include_prereleases)
-![GitHub Pre-Releases](https://img.shields.io/github/downloads-pre/paulem/resxul/latest/total)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/paulem/resxul)
+![GitHub Releases](https://img.shields.io/github/downloads/paulem/resxul/latest/total)
 
 Resxul is a tool to simplify compilation of `.resx` files into `satellite assemblies` for further localization testing.
 
