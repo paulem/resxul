@@ -1,0 +1,9 @@
+{
+  "ProfileName": "7room Aya",
+  "AppName": "Aya",
+  "AppFilePath": "%ProgramFiles%\\7room\\Aya\\Aya.exe",
+  "AppStartupArgs": "c {LangTag}",
+  "ResxNamespace": "{AppName}.Properties",
+  "SatelliteAssemblyName": "{AppName}.resources.dll",
+  "SatelliteAssemblyFolderPath": "%ProgramFiles%\\7room\\Aya\\{LangTag}"
+}

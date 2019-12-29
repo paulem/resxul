@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SearchingTools" xml:space="preserve">
+    <value>Searching resgen / al...</value>
+  </data>
+  <data name="SearchingAppExecutable" xml:space="preserve">
+    <value>Searching application executable...</value>
+  </data>
+  <data name="Compile" xml:space="preserve">
+    <value>Compile</value>
+  </data>
+  <data name="CompileAndRun" xml:space="preserve">
+    <value>Compile &amp; Run</value>
+  </data>
+  <data name="SpecifyAppPath" xml:space="preserve">
+    <value>Specify application file path (optional)</value>
+  </data>
+  <data name="SpecifyToolsFolderPath" xml:space="preserve">
+    <value>Specify resgen and al folder path</value>
+  </data>
+  <data name="Profile_Delete_Title" xml:space="preserve">
+    <value>Are you sure you want to delete "{0}" profile?</value>
+  </data>
+  <data name="ResxFile" xml:space="preserve">
+    <value>Resx file</value>
+  </data>
+  <data name="Profile_AppName" xml:space="preserve">
+    <value>Application name</value>
+  </data>
+  <data name="Profile_ResxNamespace" xml:space="preserve">
+    <value>Resx namespace</value>
+  </data>
+  <data name="Profile_SatelliteAssemblyName" xml:space="preserve">
+    <value>Satellite assembly name</value>
+  </data>
+  <data name="StartApp" xml:space="preserve">
+    <value>Start application</value>
+  </data>
+  <data name="Validation_FileNotFound" xml:space="preserve">
+    <value>File not found</value>
+  </data>
+  <data name="Validation_FieldRequired" xml:space="preserve">
+    <value>Field is required</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>An error occurred</value>
+  </data>
+  <data name="App_Wnd_Desc" xml:space="preserve">
+    <value>A tool to simplify compilation of .resx files into satellite assemblies.</value>
+  </data>
+  <data name="Profile_Select" xml:space="preserve">
+    <value>Select profile</value>
+  </data>
+  <data name="Profile_NotSelected" xml:space="preserve">
+    <value>Profile not selected</value>
+  </data>
+  <data name="Profile_Menu_Add" xml:space="preserve">
+    <value>Add profile...</value>
+  </data>
+  <data name="Profile_Menu_Edit" xml:space="preserve">
+    <value>Edit profile...</value>
+  </data>
+  <data name="Profile_Menu_Delete" xml:space="preserve">
+    <value>Delete profile</value>
+  </data>
+  <data name="SpecifyResxPath" xml:space="preserve">
+    <value>Specify path to .resx file</value>
+  </data>
+  <data name="Language_ResourceLanguage" xml:space="preserve">
+    <value>Resource language</value>
+  </data>
+  <data name="AutoStartApp" xml:space="preserve">
+    <value>Automatically start application after compilation</value>
+  </data>
+  <data name="OpenOutputFolder" xml:space="preserve">
+    <value>Open output folder after compilation</value>
+  </data>
+  <data name="Profile_EmptyState_SelectProfileToStart" xml:space="preserve">
+    <value>Select profile to start</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="Output" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="Profile_Wnd_Title" xml:space="preserve">
+    <value>Add / Edit profile</value>
+  </data>
+  <data name="Profile_Wnd_Desc" xml:space="preserve">
+    <value>A profile is required for correct compilation of the assembly.
+Special variables below and environment variables can be used.</value>
+  </data>
+  <data name="Profile_CommandLineArgs" xml:space="preserve">
+    <value>Application command line arguments (optional)</value>
+  </data>
+  <data name="Variables" xml:space="preserve">
+    <value>Variables</value>
+  </data>
+  <data name="Profile_AppFolder" xml:space="preserve">
+    <value>Application folder</value>
+  </data>
+  <data name="Language_Tag" xml:space="preserve">
+    <value>Language tag</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Profile_SatelliteAssemblyOutputFolder" xml:space="preserve">
+    <value>Assembly output folder</value>
+  </data>
+  <data name="Profile_Add" xml:space="preserve">
+    <value>Add profile</value>
+  </data>
+  <data name="Profile_Save" xml:space="preserve">
+    <value>Save changes</value>
+  </data>
+  <data name="Profile_Name" xml:space="preserve">
+    <value>Profile name</value>
+  </data>
+  <data name="Profile_AppFilePath" xml:space="preserve">
+    <value>Application file path</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="ViewLogFile" xml:space="preserve">
+    <value>View log file in {0} for more details.</value>
+  </data>
+  <data name="UnhandledExceptionOccurred" xml:space="preserve">
+    <value>An unhandled exception occurred.</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Profile_Populated" xml:space="preserve">
+    <value>Populated</value>
+  </data>
+  <data name="Profile_NotPopulated" xml:space="preserve">
+    <value>Not populated. Check profile and variables</value>
+  </data>
+  <data name="File_NotExist" xml:space="preserve">
+    <value>(doesn't exist)</value>
+  </data>
+  <data name="File_NotSelected" xml:space="preserve">
+    <value>Not selected</value>
+  </data>
+  <data name="Language_UnableToDetect" xml:space="preserve">
+    <value>Unable to detect</value>
+  </data>
+  <data name="Language_ResxNotSelected" xml:space="preserve">
+    <value>Resx file not selected</value>
+  </data>
+</root>
