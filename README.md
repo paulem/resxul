@@ -15,8 +15,8 @@ Compiling a .resx file into a .net satellite assembly requires the use of `resge
 ### Installing
 
 #### Prerequisites
-* Windows 7 or later
-* [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework) or later
+* Windows 7 or newer
+* [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework) or newer
 
 Download the latest **[Resxul installer](https://github.com/paulem/resxul/releases/latest)**.<br/>
 The installer supports both 32 and 64-bit operating systems.
