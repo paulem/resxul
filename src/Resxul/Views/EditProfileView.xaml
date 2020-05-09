@@ -1,138 +1,139 @@
-﻿<pxm:CustomWindow x:Class="Resxul.Views.EditProfileView"
-                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                       xmlns:cal="http://www.caliburnproject.org"
-                       xmlns:pxm="clr-namespace:Pixelmaniac;assembly=Pixelmaniac"
-                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                       xmlns:res="clr-namespace:Resxul.Properties"
-                       xmlns:viewModels="clr-namespace:Resxul.ViewModels"
-                       Width="480"
-                       cal:Bind.AtDesignTime="True"
-                       d:DataContext="{d:DesignInstance Type=viewModels:EditProfileViewModel,
-                                                        IsDesignTimeCreatable=True}"
-                       ResizeMode="NoResize"
-                       SizeToContent="Height"
-                       UseLayoutRounding="True"
-                       WindowStartupLocation="CenterOwner"
-                       mc:Ignorable="d">
+﻿<pxm:CustomWindow
+    x:Class="Resxul.Views.EditProfileView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cal="http://www.caliburnproject.org"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pxm="clr-namespace:Pixelmaniac;assembly=Pixelmaniac"
+    xmlns:res="clr-namespace:Resxul.Properties"
+    xmlns:viewModels="clr-namespace:Resxul.ViewModels"
+    Width="480"
+    cal:Bind.AtDesignTime="True"
+    d:DataContext="{d:DesignInstance Type=viewModels:EditProfileViewModel,
+                                     IsDesignTimeCreatable=True}"
+    ResizeMode="NoResize"
+    SizeToContent="Height"
+    UseLayoutRounding="True"
+    WindowStartupLocation="CenterOwner"
+    mc:Ignorable="d">
 
     <DockPanel>
-        <Border Background="{StaticResource Brush.FooterBackground}"
-                BorderBrush="{StaticResource Brush.FooterBorder}"
-                BorderThickness="0,1,0,0"
-                DockPanel.Dock="Bottom"
-                Padding="{StaticResource Paddings.Footer}">
+        <Border
+            Padding="{StaticResource Paddings.Footer}"
+            Background="{StaticResource Brush.FooterBackground}"
+            BorderBrush="{StaticResource Brush.FooterBorder}"
+            BorderThickness="0,1,0,0"
+            DockPanel.Dock="Bottom">
             <DockPanel LastChildFill="False">
-                <Button Margin="12,0,0,0"
-                        Content="{x:Static res:Resources.Cancel}"
-                        DockPanel.Dock="Right"
-                        IsCancel="True" />
-                <Button Margin="8,0,0,0"
-                        cal:Message.Attach="TryClose('true')"
-                        Content="{Binding SubmitButtonText, Mode=OneTime}"
-                        DockPanel.Dock="Right"
-                        IsDefault="True" />
+                <Button
+                    Margin="12,0,0,0"
+                    Content="{x:Static res:Resources.Cancel}"
+                    DockPanel.Dock="Right"
+                    IsCancel="True" />
+                <Button
+                    Margin="8,0,0,0"
+                    cal:Message.Attach="TryClose('true')"
+                    Content="{Binding SubmitButtonText, Mode=OneTime}"
+                    DockPanel.Dock="Right"
+                    IsDefault="True" />
             </DockPanel>
         </Border>
 
-        <DockPanel Margin="{StaticResource Margins.Window}" 
-                   LastChildFill="False">
+        <DockPanel Margin="{StaticResource Margins.Window}" LastChildFill="False">
 
-            <TextBlock DockPanel.Dock="Top"
-                       FontSize="{StaticResource Text.FontSize.Title}"
-                       FontWeight="Medium"
-                       Text="{x:Static res:Resources.Profile_Wnd_Title}" />
-            <TextBlock Margin="0,8,0,0"
-                       LineHeight="{StaticResource Text.LineHeight}"
-                       DockPanel.Dock="Top"
-                       FontSize="{StaticResource Text.FontSize.Description}"
-                       Foreground="{StaticResource Brush.Text.Secondary}"
-                       Text="{x:Static res:Resources.Profile_Wnd_Desc}"
-                       TextWrapping="Wrap" />
+            <TextBlock
+                DockPanel.Dock="Top"
+                FontSize="{StaticResource Text.FontSize.Title}"
+                FontWeight="Medium"
+                Text="{x:Static res:Resources.Profile_Wnd_Title}" />
+            <TextBlock
+                Margin="0,8,0,0"
+                DockPanel.Dock="Top"
+                FontSize="{StaticResource Text.FontSize.Description}"
+                Foreground="{StaticResource Brush.Text.Secondary}"
+                LineHeight="{StaticResource Text.LineHeight}"
+                Text="{x:Static res:Resources.Profile_Wnd_Desc}"
+                TextWrapping="Wrap" />
 
-            <StackPanel Margin="0,18,0,0"
-                        Width="340"
-                        DockPanel.Dock="Top" 
-                        HorizontalAlignment="Left">
+            <StackPanel
+                Width="340"
+                Margin="0,18,0,0"
+                HorizontalAlignment="Left"
+                DockPanel.Dock="Top">
                 <DockPanel DockPanel.Dock="Top">
-                    <TextBlock DockPanel.Dock="Top"
-                               Style="{StaticResource TextBlock.Caption}"
-                               Text="{x:Static res:Resources.Profile_Name}" />
-                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" 
-                                          Text="{Binding Profile.Name, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock
+                        DockPanel.Dock="Top"
+                        Style="{StaticResource TextBlock.Caption}"
+                        Text="{x:Static res:Resources.Profile_Name}" />
+                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" Text="{Binding Profile.Name, UpdateSourceTrigger=PropertyChanged}" />
                 </DockPanel>
 
-                <DockPanel Margin="0,10,0,0" 
-                           DockPanel.Dock="Top">
-                    <TextBlock DockPanel.Dock="Top"
-                               Style="{StaticResource TextBlock.Caption}"
-                               Text="{x:Static res:Resources.Profile_AppName}" />
-                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" 
-                                          Text="{Binding Profile.AppName, UpdateSourceTrigger=PropertyChanged}" />
+                <DockPanel Margin="0,10,0,0" DockPanel.Dock="Top">
+                    <TextBlock
+                        DockPanel.Dock="Top"
+                        Style="{StaticResource TextBlock.Caption}"
+                        Text="{x:Static res:Resources.Profile_AppName}" />
+                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" Text="{Binding Profile.AppName, UpdateSourceTrigger=PropertyChanged}" />
                 </DockPanel>
 
-                <DockPanel Margin="0,10,0,0" 
-                           DockPanel.Dock="Top">
-                    <TextBlock DockPanel.Dock="Top"
-                               Style="{StaticResource TextBlock.Caption}"
-                               Text="{x:Static res:Resources.Profile_AppFilePath}" />
-                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" 
-                                          Text="{Binding Profile.AppFilePath, UpdateSourceTrigger=PropertyChanged}" />
+                <DockPanel Margin="0,10,0,0" DockPanel.Dock="Top">
+                    <TextBlock
+                        DockPanel.Dock="Top"
+                        Style="{StaticResource TextBlock.Caption}"
+                        Text="{x:Static res:Resources.Profile_AppFilePath}" />
+                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" Text="{Binding Profile.AppFilePath, UpdateSourceTrigger=PropertyChanged}" />
                 </DockPanel>
 
-                <DockPanel Margin="0,10,0,0" 
-                           DockPanel.Dock="Top">
-                    <TextBlock DockPanel.Dock="Top"
-                               Style="{StaticResource TextBlock.Caption}"
-                               Text="{x:Static res:Resources.Profile_SatelliteAssemblyName}" />
-                    <pxm:WatermarkTextBox VerticalContentAlignment="Center"
-                                          Text="{Binding Profile.SatelliteAssemblyName, UpdateSourceTrigger=PropertyChanged}" />
+                <DockPanel Margin="0,10,0,0" DockPanel.Dock="Top">
+                    <TextBlock
+                        DockPanel.Dock="Top"
+                        Style="{StaticResource TextBlock.Caption}"
+                        Text="{x:Static res:Resources.Profile_SatelliteAssemblyName}" />
+                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" Text="{Binding Profile.SatelliteAssemblyName, UpdateSourceTrigger=PropertyChanged}" />
                 </DockPanel>
 
-                <DockPanel Margin="0,10,0,0" 
-                           DockPanel.Dock="Top">
-                    <TextBlock DockPanel.Dock="Top"
-                               Style="{StaticResource TextBlock.Caption}"
-                               Text="{x:Static res:Resources.Profile_SatelliteAssemblyOutputFolder}" />
-                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" 
-                                          Text="{Binding Profile.SatelliteAssemblyFolderPath, UpdateSourceTrigger=PropertyChanged}" />
+                <DockPanel Margin="0,10,0,0" DockPanel.Dock="Top">
+                    <TextBlock
+                        DockPanel.Dock="Top"
+                        Style="{StaticResource TextBlock.Caption}"
+                        Text="{x:Static res:Resources.Profile_SatelliteAssemblyOutputFolder}" />
+                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" Text="{Binding Profile.SatelliteAssemblyFolderPath, UpdateSourceTrigger=PropertyChanged}" />
                 </DockPanel>
 
-                <DockPanel Margin="0,10,0,0" 
-                           DockPanel.Dock="Top">
-                    <TextBlock DockPanel.Dock="Top"
-                               Style="{StaticResource TextBlock.Caption}"
-                               Text="{x:Static res:Resources.Profile_ResxNamespace}" />
-                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" 
-                                          Text="{Binding Profile.ResxNamespace, UpdateSourceTrigger=PropertyChanged}" />
+                <DockPanel Margin="0,10,0,0" DockPanel.Dock="Top">
+                    <TextBlock
+                        DockPanel.Dock="Top"
+                        Style="{StaticResource TextBlock.Caption}"
+                        Text="{x:Static res:Resources.Profile_ResxNamespace}" />
+                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" Text="{Binding Profile.ResxNamespace, UpdateSourceTrigger=PropertyChanged}" />
                 </DockPanel>
 
-                <DockPanel Margin="0,10,0,0" 
-                           DockPanel.Dock="Top">
-                    <TextBlock DockPanel.Dock="Top"
-                               Style="{StaticResource TextBlock.Caption}"
-                               Text="{x:Static res:Resources.Profile_CommandLineArgs}" />
-                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" 
-                                          Text="{Binding Profile.AppStartupArgs, UpdateSourceTrigger=PropertyChanged}" />
+                <DockPanel Margin="0,10,0,0" DockPanel.Dock="Top">
+                    <TextBlock
+                        DockPanel.Dock="Top"
+                        Style="{StaticResource TextBlock.Caption}"
+                        Text="{x:Static res:Resources.Profile_CommandLineArgs}" />
+                    <pxm:WatermarkTextBox VerticalContentAlignment="Center" Text="{Binding Profile.AppStartupArgs, UpdateSourceTrigger=PropertyChanged}" />
                 </DockPanel>
             </StackPanel>
 
-            <DockPanel Margin="0,28,0,0" 
-                       DockPanel.Dock="Top">
-                <TextBlock DockPanel.Dock="Top" 
-                           FontSize="{StaticResource Text.FontSize.Description}" 
-                           Text="{x:Static res:Resources.Variables}" />
-                <ItemsControl Margin="0,12,0,0"
-                              ItemsSource="{Binding Variables.Collection, Mode=OneTime}"
-                              Grid.IsSharedSizeScope="True" >
+            <DockPanel Margin="0,28,0,0" DockPanel.Dock="Top">
+                <TextBlock
+                    DockPanel.Dock="Top"
+                    FontSize="{StaticResource Text.FontSize.Description}"
+                    Text="{x:Static res:Resources.Variables}" />
+                <ItemsControl
+                    Margin="0,12,0,0"
+                    Grid.IsSharedSizeScope="True"
+                    ItemsSource="{Binding Variables.Collection, Mode=OneTime}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <DataTemplate.Resources>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="FontFamily" Value="Consolas" />
                                 </Style>
-                                <Style TargetType="TextBox" BasedOn="{StaticResource TextBox.Invisible}">
+                                <Style BasedOn="{StaticResource TextBox.Invisible}" TargetType="TextBox">
                                     <Setter Property="FontFamily" Value="Consolas" />
                                 </Style>
                             </DataTemplate.Resources>
@@ -142,14 +143,16 @@
                                     <ColumnDefinition Width="18" />
                                     <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
-                                <TextBox Grid.Column="0" 
-                                         Padding="-2,0,0,0" 
-                                         IsReadOnly="True" 
-                                         Text="{Binding Name, Mode=OneWay}" />
-                                <TextBlock Grid.Column="2"
-                                           Foreground="{StaticResource Brush.Text.Secondary}"
-                                           Text="{Binding Description}"
-                                           TextWrapping="Wrap" />
+                                <TextBox
+                                    Grid.Column="0"
+                                    Padding="-2,0,0,0"
+                                    IsReadOnly="True"
+                                    Text="{Binding Name, Mode=OneWay}" />
+                                <TextBlock
+                                    Grid.Column="2"
+                                    Foreground="{StaticResource Brush.Text.Secondary}"
+                                    Text="{Binding Description}"
+                                    TextWrapping="Wrap" />
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
