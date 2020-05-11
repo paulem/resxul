@@ -63,7 +63,7 @@
                     IsCancel="True"
                     Visibility="{Binding HideNoButton, Converter={StaticResource BooleanToVisibilityInverseConverter}}" />
                 <Button
-                    cal:Message.Attach="TryClose('true')"
+                    cal:Message.Attach="TryCloseAsync('true')"
                     Content="{Binding YesButtonText}"
                     DockPanel.Dock="Right"
                     IsDefault="True"

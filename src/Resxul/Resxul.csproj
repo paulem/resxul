@@ -11,10 +11,12 @@
     <Authors>Pavel Mikhaylov</Authors>
     <Company>7room</Company>
     <ApplicationIcon>resxul.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
  </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Caliburn.Micro" Version="3.2.0" />
+    <PackageReference Include="Caliburn.Micro" Version="4.0.125-alpha" />
+    <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.18362.2005" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
   </ItemGroup>

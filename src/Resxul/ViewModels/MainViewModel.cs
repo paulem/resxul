@@ -7,6 +7,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Caliburn.Micro;
 using Resxul.Framework;
@@ -293,7 +294,7 @@ namespace Resxul.ViewModels
                     HideYesButton = true
                 };
 
-                _windowManager.ShowDialog(vm);
+                _windowManager.ShowDialogAsync(vm);
             }
         }
 
@@ -327,11 +328,11 @@ namespace Resxul.ViewModels
 
         #region Profile Operations
 
-        public void EditProfile()
+        public async void EditProfile()
         {
             var vm = new EditProfileViewModel(SelectedProfile.ShallowCopy());
 
-            if (_windowManager.ShowDialog(vm) != true)
+            if (await _windowManager.ShowDialogAsync(vm) != true)
                 return;
 
             vm.Profile.CopyTo(SelectedProfile);
@@ -340,7 +341,7 @@ namespace Resxul.ViewModels
             RefreshStatus();
         }
 
-        public void DeleteProfile()
+        public async void DeleteProfile()
         {
             if (SelectedProfile == null)
                 return;
@@ -351,7 +352,7 @@ namespace Resxul.ViewModels
                 Title = string.Format(Resources.Profile_Delete_Title, SelectedProfile.Name)
             };
 
-            if (_windowManager.ShowDialog(vm) != true)
+            if (await _windowManager.ShowDialogAsync(vm) != true)
                 return;
 
             _profileService.DeleteProfile(SelectedProfile);
@@ -360,11 +361,11 @@ namespace Resxul.ViewModels
             SelectedProfile = Profiles.FirstOrDefault();
         }
 
-        public void AddProfile()
+        public async void AddProfile()
         {
             var vm = new EditProfileViewModel(null);
 
-            if (_windowManager.ShowDialog(vm) != true)
+            if (await _windowManager.ShowDialogAsync(vm) != true)
                 return;
 
             _profileService.AddProfile(vm.Profile);
@@ -419,9 +420,10 @@ namespace Resxul.ViewModels
 
         #region Protected Methods
 
-        protected override void OnDeactivate(bool close)
+        protected override Task OnDeactivateAsync(bool close, CancellationToken cancellationToken)
         {
             _profileService.SaveProfiles();
+            return base.OnDeactivateAsync(close, cancellationToken);
         }
 
         #endregion

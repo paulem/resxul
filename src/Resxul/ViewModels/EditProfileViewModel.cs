@@ -1,4 +1,6 @@
-﻿using Caliburn.Micro;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using Caliburn.Micro;
 using Resxul.Models;
 using Resxul.Properties;
 
@@ -55,14 +57,16 @@ namespace Resxul.ViewModels
                                    && !string.IsNullOrEmpty(Profile.SatelliteAssemblyName)
                                    && !string.IsNullOrEmpty(Profile.SatelliteAssemblyFolderPath);
 
-        protected override void OnActivate()
+        protected override Task OnActivateAsync(CancellationToken cancellationToken)
         {
             Profile.PropertyChanged += Profile_PropertyChanged;
+            return base.OnActivateAsync(cancellationToken);
         }
 
-        protected override void OnDeactivate(bool close)
+        protected override Task OnDeactivateAsync(bool close, CancellationToken cancellationToken)
         {
             Profile.PropertyChanged -= Profile_PropertyChanged;
+            return base.OnDeactivateAsync(close, cancellationToken);
         }
 
         private void Profile_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

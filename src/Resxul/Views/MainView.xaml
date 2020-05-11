@@ -11,6 +11,7 @@
     xmlns:pxm="clr-namespace:Pixelmaniac;assembly=Pixelmaniac"
     xmlns:res="clr-namespace:Resxul.Properties"
     xmlns:viewModels="clr-namespace:Resxul.ViewModels"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
     Width="940"
     Height="660"
     MinWidth="882"
@@ -142,7 +143,7 @@
                     Style="{StaticResource Button.Hyperlink}" />
                 <Button
                     Margin="12,0,0,0"
-                    cal:Message.Attach="TryClose(null)"
+                    cal:Message.Attach="TryCloseAsync(null)"
                     Content="{x:Static res:Resources.Close}"
                     DockPanel.Dock="Right" />
                 <Button
@@ -247,9 +248,9 @@
                                 <Canvas Width="16" Height="16">
                                     <Path Data="{StaticResource Geometry.16.Menu}" Fill="{StaticResource Brush.Text.Secondary}" />
                                 </Canvas>
-                                <i:Interaction.Behaviors>
+                                <b:Interaction.Behaviors>
                                     <behaviors:DropDownButtonBehavior />
-                                </i:Interaction.Behaviors>
+                                </b:Interaction.Behaviors>
                                 <Button.ContextMenu>
                                     <ContextMenu>
                                         <ContextMenu.Resources>

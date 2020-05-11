@@ -33,7 +33,7 @@
                     IsCancel="True" />
                 <Button
                     Margin="8,0,0,0"
-                    cal:Message.Attach="TryClose('true')"
+                    cal:Message.Attach="TryCloseAsync('true')"
                     Content="{Binding SubmitButtonText, Mode=OneTime}"
                     DockPanel.Dock="Right"
                     IsDefault="True" />
