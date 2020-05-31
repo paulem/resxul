@@ -276,13 +276,16 @@ namespace Resxul.ViewModels
         {
             try
             {
-                ProcessStartInfo psi = new ProcessStartInfo
-                {
-                    FileName = Global.ProgramReleaseNotesUri,
-                    UseShellExecute = true
-                };
+                var ns = new NotificationService();
+                ns.ShowNotification("description", 16);
 
-                Process.Start(psi);
+                //ProcessStartInfo psi = new ProcessStartInfo
+                //{
+                //    FileName = Global.ProgramReleaseNotesUri,
+                //    UseShellExecute = true
+                //};
+
+                //Process.Start(psi);
             }
             catch (Exception ex)
             {

@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Windows.Data.Xml.Dom;
+﻿using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
+using Resxul.Framework.ToastNotifications;
 
 namespace Resxul.Services
 {
     internal class NotificationService
     {
+        public NotificationService()
+        {
+
+        }
+
         public void ShowNotification(string description, double amount)
         {
             string xml = $@"<toast>
@@ -23,7 +26,9 @@ namespace Resxul.Services
             doc.LoadXml(xml);
 
             ToastNotification toast = new ToastNotification(doc);
-            ToastNotificationManager.CreateToastNotifier().Show(toast);
+
+            //ToastNotificationManager.CreateToastNotifier().Show(toast);
+            DesktopNotificationManagerCompat.CreateToastNotifier().Show(toast);
         }
     }
 }
